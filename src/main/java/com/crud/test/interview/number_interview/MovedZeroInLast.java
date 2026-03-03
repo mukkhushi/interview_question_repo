@@ -11,6 +11,10 @@ public class MovedZeroInLast {
         l1.addAll(l2);
         System.out.println(l1);
 
+        //alternative
+        //List<Integer> newList = IntStream.concat(il1.stream().mapToInt(i->i),il2.stream().mapToInt(j->j)).boxed().toList();
+
+
 
     }
 }

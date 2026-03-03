@@ -19,11 +19,11 @@ public class TestDemo {
                .boxed().toList();
         System.out.println(filterList);
 
-        IntStream.range(0,list.size()-(window-1))
+       /* IntStream.range(0,list.size()-(window-1))
                 .mapToObj(i-> list.subList(i ,window + i))
                 .map(j->j.stream().mapToInt(s->s).sum()==0
 
-                        ).forEach(System.out::println);
+                        ).forEach(System.out::println);*/
 
     }
 }
