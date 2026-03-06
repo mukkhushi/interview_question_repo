@@ -2,13 +2,14 @@ package com.crud.test.interview.number_interview;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class CountRepeat1BetweenRange {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         sc.close();
-        int count = 0;
+       /* int count = 0;
         for(int i=1;i<=N;i++){
             int num = i,r;
             while(num!=0){
@@ -17,13 +18,26 @@ public class CountRepeat1BetweenRange {
                 if(r==1) count++;
             }
         }
-        System.out.println(count);
+        System.out.println(count);*/
 
         Long count2 = IntStream.rangeClosed(1,N)
                 .mapToObj(String::valueOf)
-                .flatMapToInt(s->s.chars())
+                .flatMapToInt(String::chars).peek(System.out::println)
                         .filter(ch->ch=='1')
                         .count();
          System.out.println(count2);
+
+
+        /*Long sum = IntStream.rangeClosed(0,21)
+                .mapToObj(Integer::toString)
+                .filter(s->s.contains("1"))
+                .map(i->
+                        Stream.of(i.split(""))
+                                .filter(s->s.equals("1"))
+                                .count()
+                )
+                .toList()
+                .stream()
+                .reduce((a,b)->a+b).orElse(0L);*/
     }
 }
