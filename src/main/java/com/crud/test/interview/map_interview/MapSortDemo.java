@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class MapDemo {
+public class MapSortDemo {
     public static void main(String[] args) {
         Map<String, Integer> unsortedMap = new HashMap<>();
         unsortedMap.put("Apple", 10);
@@ -33,7 +33,5 @@ public class MapDemo {
                 });
 
         System.out.println("Sorted Map:"+sortedMap);
-
-
     }
 }
