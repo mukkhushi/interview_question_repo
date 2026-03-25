@@ -10,13 +10,13 @@ public class HospitalVisitCount {
 
         List<String> names = List.of("Alice","Mukesh","Alice","Mukesh","Ravi","Alice","Som");
         for(String s:names) {
-            /*if (!visits.containsKey(s))
+            if (!visits.containsKey(s))
                 visits.put(s, 1);
             else {
                 visits.put(s, visits.get(s) + 1);
-            }*/
-            visits.computeIfAbsent(s,key->0);
-            visits.computeIfPresent(s,(key,count)->count+1);
+            }
+            //visits.computeIfAbsent(s,key->0);
+            //visits.computeIfPresent(s,(key,count)->count+1);
         }
         System.out.println(visits);
     }

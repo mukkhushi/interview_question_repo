@@ -26,7 +26,7 @@ public class Find2ndMaximumSalary {
     }
 }
 //for testing
-class EmployeeDTOSalary{
+ class EmployeeDTOSalary{
     private Integer id;
     private String name;
     private String deptName;

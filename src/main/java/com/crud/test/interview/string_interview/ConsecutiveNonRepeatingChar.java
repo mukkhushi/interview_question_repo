@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
 public class ConsecutiveNonRepeatingChar {
     public static void main(String[] args) {
         String str2 = "aaxxshhhhhyydhiiii";
+        //String str2 = "aabtbccdodeeff";
         String nonRepeatChar = IntStream.range(0, str2.length())
                 .filter(
                         i->(i == 0 || str2.charAt(i) != str2.charAt(i-1))
