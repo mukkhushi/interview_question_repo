@@ -1,9 +1,9 @@
 package com.crud.test.interview.number_interview;
 
-public class BubbleArraySort {
+public class BubbleAndSelectionArraySort {
 
     public static void main(String[] args) {
-        //int [] a = {0,1,1,0,0,1,0};
+        //int [] a = {0,1,1,0,0,1,0}; asked in interview
         int[]a = {5,3,4,7,8,2,1};
         for(int i = 0; i < a.length ; i++){
             for(int j = 0; j < (a.length-1)-i; j++) {
@@ -13,9 +13,31 @@ public class BubbleArraySort {
                     a[j] = (a[j] - a[j + 1]);
                 }
             }
+            for(int k:a){
+                System.out.print(k+",");
+            }
+            System.out.println();
         }
         for (int i:a)
             System.out.print(i+",");
+
+
+       /* //selection sort
+        for(int i=0;i<a.length;i++){
+            for(int j=i;j<a.length-1;j++){
+
+                int temp;
+                if(a[i]>a[j+1]){
+                    temp = a[i];
+                    a[i] = a[j+1];
+                    a[j+1] = temp;
+                }
+            }
+            for(int k:a){
+                System.out.print(k+",");
+            }
+            System.out.println();
+        }*/
 
         /*List<Integer> ia = IntStream.of(a).boxed().toList();
         long startTime = System.currentTimeMillis();

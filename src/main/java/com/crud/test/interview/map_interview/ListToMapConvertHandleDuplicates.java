@@ -12,8 +12,8 @@ public class ListToMapConvertHandleDuplicates {
         Map<Integer,String> map = new HashMap<>();
 
         map = stringList.stream().collect(Collectors.toMap(String::length,a->a
-        ,(a1,a2)->a1 +","+a2
-        ));
+        ,(a1,a2)->a1 +","+a2));
+
         System.out.println(map);
 
     }

@@ -1,9 +1,15 @@
 package com.crud.test.interview.design_pattern.builder;
 
 public class User {
-    private Integer id;
-    private String name;
-    private Boolean isIlliterate;
+    private final Integer id;
+    private final  String name;
+    private final Boolean isIlliterate;
+
+    User(Builder builder){
+        this.id = builder.id;
+        this.name = builder.name;
+        this.isIlliterate = builder.isIlliterate;
+    }
 
     public static class Builder{
         private Integer id;
@@ -24,11 +30,7 @@ public class User {
         }
 
         User build(){
-            User user = new User();
-            user.id = this.id;
-            user.name = this.name;
-            user.isIlliterate = this.isIlliterate;
-            return user;
+            return new User(this);
         }
     }
 

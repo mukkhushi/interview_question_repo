@@ -10,11 +10,11 @@ public class Main {
         fid.method();
 
         List<Integer> integerList = List.of(12,13,14,22,15,2636362,16,25);
-        Set<Integer> set = new HashSet<>();
+        /*Set<Integer> set = new HashSet<>();
         List<Integer> duplicates = integerList.stream()
                         .filter(i->!set.add(i))
-                                .toList();
-        System.out.println(duplicates);
+                                .toList();*/
+        //System.out.println(duplicates);
 
         integerList.stream()
                 .map(String::valueOf)

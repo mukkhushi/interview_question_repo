@@ -14,7 +14,7 @@ public class ListOfListFromSingleListByWindow {
 
         List<List<Integer>> il = IntStream.range(0,a.length-(w-1))
                 .mapToObj(i->ai.subList(i,w+i))
-                .map(m->m.stream().mapToInt(i->i).boxed().toList())
+                //.map(m->m.stream().mapToInt(i->i).boxed().toList())
                 .toList();
         System.out.println(il);
     }

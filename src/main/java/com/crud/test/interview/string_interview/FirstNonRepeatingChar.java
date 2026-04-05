@@ -26,7 +26,8 @@ public class FirstNonRepeatingChar {
                 .entrySet()
                 .stream()
                 .max(Comparator.comparingLong(Map.Entry::getValue))
-                .get().getKey();
+                .map(Map.Entry::getKey)
+                .get();
 
         System.out.println("firstNonRepeatChar = "+firstNonRepeatChar);
         System.out.println("maxRepeatChar = "+maxRepeatChar);

@@ -25,6 +25,9 @@ public class PalindromeString {
                 .collect(Collectors.joining());
 
         System.out.println(s.equals(revString)?"P":"Not P");
+
+        /*System.out.println(IntStream.range(0,s.length()/2)
+                .allMatch(i->s.charAt(i)==s.charAt(s.length()-1-i))?"p":"n");*/
         
     }
 }

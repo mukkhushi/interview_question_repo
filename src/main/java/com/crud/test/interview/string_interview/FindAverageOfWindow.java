@@ -9,6 +9,10 @@ public class FindAverageOfWindow {
        var window = 3;
         //output 3.3,4,4.1,6.1
 
+        int[]a = {2,3,4,5};
+
+        List<Integer> integerList = IntStream.of(a).boxed().toList();
+
         List<Double> list = IntStream.range(0, input.size() - (window-1))
                 .mapToObj(i-> input.subList(i, window + i))
                 .map(
